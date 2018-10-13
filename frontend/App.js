@@ -281,7 +281,7 @@ txtCounter: {
   fontSize: 20 ,
   textAlignVertical: 'center',
   fontWeight: '200',
-  
+
   letterSpacing: 3,
 },
 button:{
