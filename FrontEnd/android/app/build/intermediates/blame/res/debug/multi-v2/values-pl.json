@@ -1,10 +1,20 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pl/values-pl.xml",
+            "outputFile": "/home/daniel/Desktop/NTU/iNTUition/FrontEnd/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pl/values-pl.xml",
             "map": [
                 {
-                    "source": "/Users/arkarmin/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/9d3e60f6a4a19d3c1d7826a39edacdab/res/values-pl/values-pl.xml",
+                    "source": "/home/daniel/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/b5ed686180d5b6f27af02dddddd5bac2/res/values-pl/values-pl.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,221,323,431,517,626,745,823,900,982,1091,1200,1299,1408,1519,1627,1790,1886",
+                        "endColumns": "115,101,107,85,108,118,77,76,81,108,108,98,108,110,107,162,95,81",
+                        "endOffsets": "216,318,426,512,621,740,818,895,977,1086,1195,1294,1403,1514,1622,1785,1881,1963"
+                    }
+                },
+                {
+                    "source": "/home/daniel/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/3358689b750cefdf4fc6fc3207aadfb9/res/values-pl/values-pl.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -18,16 +28,6 @@
                         "startOffsets": "1968",
                         "endColumns": "100",
                         "endOffsets": "2064"
-                    }
-                },
-                {
-                    "source": "/Users/arkarmin/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/7cb32fd79964d8de78c25773246be9dd/res/values-pl/values-pl.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,221,323,431,517,626,745,823,900,982,1091,1200,1299,1408,1519,1627,1790,1886",
-                        "endColumns": "115,101,107,85,108,118,77,76,81,108,108,98,108,110,107,162,95,81",
-                        "endOffsets": "216,318,426,512,621,740,818,895,977,1086,1195,1294,1403,1514,1622,1785,1881,1963"
                     }
                 }
             ]
