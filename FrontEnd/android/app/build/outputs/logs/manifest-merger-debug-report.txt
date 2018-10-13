@@ -1,0 +1,162 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/android/app/src/main/AndroidManifest.xml:1:1-26:12
+INJECTED from /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/android/app/src/main/AndroidManifest.xml:1:1-26:12
+INJECTED from /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/android/app/src/main/AndroidManifest.xml:1:1-26:12
+INJECTED from /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/android/app/src/main/AndroidManifest.xml:1:1-26:12
+MERGED from [:react-native-audio-recorder-player] /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/node_modules/react-native-audio-recorder-player/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-14:12
+MERGED from [com.facebook.react:react-native:0.57.3] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/react-native-0.57.3.aar/6cf77cd2d2e856a658f21cd1fe7cfb1b/AndroidManifest.xml:2:1-15:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/7cb32fd79964d8de78c25773246be9dd/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/9ff780f9acd2a6a0d58749cbbec3bef2/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/34e5a9a65db7f25be197245c77678b37/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/73288e2d3768bb18f2c07598b7d54105/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/45985fb90745f74422c457708482a0a6/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/8aeb516fdf534ec8c7f0a5d1d19311ab/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/9d3e60f6a4a19d3c1d7826a39edacdab/AndroidManifest.xml:17:1-22:12
+MERGED from [com.facebook.fresco:fresco:1.10.0] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/fresco-1.10.0.aar/8647240dad53ee217add1f7aad717a4a/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.10.0] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-1.10.0.aar/0d85fda7e364773403c55dc56c9ac89e/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:drawee:1.10.0] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/drawee-1.10.0.aar/99add11c99761ff04ba9ef5eb4fc674c/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline:1.10.0] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/imagepipeline-1.10.0.aar/31f284a13952708cfcbe5abe63356cf2/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-base:1.10.0] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-1.10.0.aar/d73e2731a4f8b63f7b4e6cd6fbb72970/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.soloader:soloader:0.5.1] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/soloader-0.5.1.aar/9cae4b82782f83df4cac844549856a38/AndroidManifest.xml:2:1-13:12
+MERGED from [org.webkit:android-jsc:r174650] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/android-jsc-r174650.aar/72862f6ec7e8fa57bd53169936caa5f8/AndroidManifest.xml:1:1-3:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/87599256fdc4357cb675590f32b317f3/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/cb86d3c78ea721b7184b0c4d9c94f40d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.facebook.fresco:fbcore:1.10.0] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/fbcore-1.10.0.aar/020e666383b4a3470575fa4ad5137610/AndroidManifest.xml:2:1-9:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/8b8dc9aeee87ce2b6aa338ba1c8a5cdf/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/1153f01c0bd8a50931021b5d631ca35d/AndroidManifest.xml:17:1-22:12
+INJECTED from /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/android/app/src/main/AndroidManifest.xml:1:1-26:12
+INJECTED from /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/android/app/src/main/AndroidManifest.xml:1:1-26:12
+INJECTED from /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/android/app/src/main/AndroidManifest.xml:1:1-26:12
+	package
+		ADDED from /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/android/app/src/main/AndroidManifest.xml:2:5-33
+		INJECTED from /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/android/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/android/app/src/main/AndroidManifest.xml:1:1-26:12
+		INJECTED from /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/android/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/android/app/src/main/AndroidManifest.xml:1:1-26:12
+		INJECTED from /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/android/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/android/app/src/main/AndroidManifest.xml:1:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/android/app/src/main/AndroidManifest.xml:4:5-67
+	android:name
+		ADDED from /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/android/app/src/main/AndroidManifest.xml:4:22-64
+uses-permission#android.permission.SYSTEM_ALERT_WINDOW
+ADDED from /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/android/app/src/main/AndroidManifest.xml:5:5-77
+MERGED from [com.facebook.react:react-native:0.57.3] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/react-native-0.57.3.aar/6cf77cd2d2e856a658f21cd1fe7cfb1b/AndroidManifest.xml:11:5-78
+MERGED from [com.facebook.react:react-native:0.57.3] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/react-native-0.57.3.aar/6cf77cd2d2e856a658f21cd1fe7cfb1b/AndroidManifest.xml:11:5-78
+	android:name
+		ADDED from /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/android/app/src/main/AndroidManifest.xml:5:22-75
+application
+ADDED from /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/android/app/src/main/AndroidManifest.xml:7:5-24:19
+MERGED from [com.facebook.react:react-native:0.57.3] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/react-native-0.57.3.aar/6cf77cd2d2e856a658f21cd1fe7cfb1b/AndroidManifest.xml:13:5-20
+MERGED from [com.facebook.react:react-native:0.57.3] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/react-native-0.57.3.aar/6cf77cd2d2e856a658f21cd1fe7cfb1b/AndroidManifest.xml:13:5-20
+MERGED from [com.facebook.soloader:soloader:0.5.1] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/soloader-0.5.1.aar/9cae4b82782f83df4cac844549856a38/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.soloader:soloader:0.5.1] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/soloader-0.5.1.aar/9cae4b82782f83df4cac844549856a38/AndroidManifest.xml:11:5-20
+MERGED from [org.webkit:android-jsc:r174650] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/android-jsc-r174650.aar/72862f6ec7e8fa57bd53169936caa5f8/AndroidManifest.xml:2:3-17
+MERGED from [org.webkit:android-jsc:r174650] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/android-jsc-r174650.aar/72862f6ec7e8fa57bd53169936caa5f8/AndroidManifest.xml:2:3-17
+	android:label
+		ADDED from /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/android/app/src/main/AndroidManifest.xml:9:7-39
+	android:icon
+		ADDED from /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/android/app/src/main/AndroidManifest.xml:10:7-41
+	android:allowBackup
+		ADDED from /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/android/app/src/main/AndroidManifest.xml:11:7-34
+	android:theme
+		ADDED from /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/android/app/src/main/AndroidManifest.xml:12:7-38
+	android:name
+		ADDED from /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/android/app/src/main/AndroidManifest.xml:8:7-38
+activity#com.awesomeproject.MainActivity
+ADDED from /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/android/app/src/main/AndroidManifest.xml:13:7-22:18
+	android:label
+		ADDED from /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/android/app/src/main/AndroidManifest.xml:15:9-41
+	android:windowSoftInputMode
+		ADDED from /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/android/app/src/main/AndroidManifest.xml:17:9-51
+	android:configChanges
+		ADDED from /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/android/app/src/main/AndroidManifest.xml:16:9-79
+	android:name
+		ADDED from /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/android/app/src/main/AndroidManifest.xml:14:9-37
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/android/app/src/main/AndroidManifest.xml:18:9-21:25
+action#android.intent.action.MAIN
+ADDED from /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/android/app/src/main/AndroidManifest.xml:19:13-65
+	android:name
+		ADDED from /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/android/app/src/main/AndroidManifest.xml:19:21-62
+category#android.intent.category.LAUNCHER
+ADDED from /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/android/app/src/main/AndroidManifest.xml:20:13-73
+	android:name
+		ADDED from /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/android/app/src/main/AndroidManifest.xml:20:23-70
+activity#com.facebook.react.devsupport.DevSettingsActivity
+ADDED from /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/android/app/src/main/AndroidManifest.xml:23:7-84
+	android:name
+		ADDED from /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/android/app/src/main/AndroidManifest.xml:23:17-81
+uses-sdk
+INJECTED from /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/android/app/src/main/AndroidManifest.xml
+MERGED from [:react-native-audio-recorder-player] /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/node_modules/react-native-audio-recorder-player/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-audio-recorder-player] /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/node_modules/react-native-audio-recorder-player/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.57.3] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/react-native-0.57.3.aar/6cf77cd2d2e856a658f21cd1fe7cfb1b/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.57.3] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/react-native-0.57.3.aar/6cf77cd2d2e856a658f21cd1fe7cfb1b/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/7cb32fd79964d8de78c25773246be9dd/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/7cb32fd79964d8de78c25773246be9dd/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/9ff780f9acd2a6a0d58749cbbec3bef2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/9ff780f9acd2a6a0d58749cbbec3bef2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/34e5a9a65db7f25be197245c77678b37/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/34e5a9a65db7f25be197245c77678b37/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/73288e2d3768bb18f2c07598b7d54105/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/73288e2d3768bb18f2c07598b7d54105/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/45985fb90745f74422c457708482a0a6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/45985fb90745f74422c457708482a0a6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/8aeb516fdf534ec8c7f0a5d1d19311ab/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/8aeb516fdf534ec8c7f0a5d1d19311ab/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/9d3e60f6a4a19d3c1d7826a39edacdab/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/9d3e60f6a4a19d3c1d7826a39edacdab/AndroidManifest.xml:20:5-44
+MERGED from [com.facebook.fresco:fresco:1.10.0] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/fresco-1.10.0.aar/8647240dad53ee217add1f7aad717a4a/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fresco:1.10.0] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/fresco-1.10.0.aar/8647240dad53ee217add1f7aad717a4a/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.10.0] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-1.10.0.aar/0d85fda7e364773403c55dc56c9ac89e/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.10.0] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-1.10.0.aar/0d85fda7e364773403c55dc56c9ac89e/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:1.10.0] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/drawee-1.10.0.aar/99add11c99761ff04ba9ef5eb4fc674c/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:1.10.0] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/drawee-1.10.0.aar/99add11c99761ff04ba9ef5eb4fc674c/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:1.10.0] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/imagepipeline-1.10.0.aar/31f284a13952708cfcbe5abe63356cf2/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:1.10.0] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/imagepipeline-1.10.0.aar/31f284a13952708cfcbe5abe63356cf2/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:1.10.0] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-1.10.0.aar/d73e2731a4f8b63f7b4e6cd6fbb72970/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:1.10.0] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-1.10.0.aar/d73e2731a4f8b63f7b4e6cd6fbb72970/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.soloader:soloader:0.5.1] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/soloader-0.5.1.aar/9cae4b82782f83df4cac844549856a38/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.soloader:soloader:0.5.1] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/soloader-0.5.1.aar/9cae4b82782f83df4cac844549856a38/AndroidManifest.xml:7:5-9:41
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/87599256fdc4357cb675590f32b317f3/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/87599256fdc4357cb675590f32b317f3/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/cb86d3c78ea721b7184b0c4d9c94f40d/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/cb86d3c78ea721b7184b0c4d9c94f40d/AndroidManifest.xml:20:5-44
+MERGED from [com.facebook.fresco:fbcore:1.10.0] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/fbcore-1.10.0.aar/020e666383b4a3470575fa4ad5137610/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:1.10.0] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/fbcore-1.10.0.aar/020e666383b4a3470575fa4ad5137610/AndroidManifest.xml:5:5-7:41
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/8b8dc9aeee87ce2b6aa338ba1c8a5cdf/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/8b8dc9aeee87ce2b6aa338ba1c8a5cdf/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/1153f01c0bd8a50931021b5d631ca35d/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /Users/arkarmin/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/1153f01c0bd8a50931021b5d631ca35d/AndroidManifest.xml:20:5-44
+INJECTED from /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/android/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/android/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/android/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from [:react-native-audio-recorder-player] /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/node_modules/react-native-audio-recorder-player/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:11:5-71
+	android:name
+		ADDED from [:react-native-audio-recorder-player] /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/node_modules/react-native-audio-recorder-player/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:11:22-68
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from [:react-native-audio-recorder-player] /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/node_modules/react-native-audio-recorder-player/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:12:5-81
+	android:name
+		ADDED from [:react-native-audio-recorder-player] /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/node_modules/react-native-audio-recorder-player/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:12:22-78
+uses-permission#android.permission.READ_PHONE_STATE
+IMPLIED from /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/android/app/src/main/AndroidManifest.xml:1:1-26:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+IMPLIED from /Users/arkarmin/Documents/GitHub/iNTUition/FrontEnd/android/app/src/main/AndroidManifest.xml:1:1-26:12 reason: org.webkit.android_jsc requested WRITE_EXTERNAL_STORAGE
