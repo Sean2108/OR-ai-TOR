@@ -15,7 +15,9 @@ import {
 } from 'react-native';
 
 import AudioRecorderPlayer from 'react-native-audio-recorder-player';
+import RNFS from 'react-native-fs';
 
+var uri;
 export default class App extends React.Component {
 
   constructor(props) {
@@ -27,10 +29,32 @@ export default class App extends React.Component {
       currentDurationSec: 0,
       playTime: '00:00:00',
       duration: '00:00:00',
+      recordedFiles:'',
     };
 
     this.audioRecorderPlayer = new AudioRecorderPlayer();
     this.audioRecorderPlayer.setSubscriptionDuration(0.09); // optional. Default is 0.1
+  }
+
+  Btoa(input){
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
+    let str = input;
+    let output = '';
+
+    for (let block = 0, charCode, i = 0, map = chars;
+    str.charAt(i | 0) || (map = '=', i % 1);
+    output += map.charAt(63 & block >> 8 - i % 1 * 8)) {
+
+      charCode = str.charCodeAt(i += 3/4);
+
+      if (charCode > 0xFF) {
+        throw new Error("'btoa' failed: The string to be encoded contains characters outside of the Latin1 range.");
+      }
+
+      block = block << 8 | charCode;
+    }
+
+    return output;
   }
 
   onStatusPress = (e: any) => {
@@ -52,7 +76,6 @@ export default class App extends React.Component {
       console.log(`subSecs: ${subSecs}`);
     }
   }
-
   onStartRecord = async () => {
     if (Platform.OS === 'android') {
       try {
@@ -98,7 +121,7 @@ export default class App extends React.Component {
       ios: 'hello.m4a',
       android: 'sdcard/hello.mp4',
     });
-    const uri = await this.audioRecorderPlayer.startRecorder();
+    uri = await this.audioRecorderPlayer.startRecorder(path); //file location
     this.audioRecorderPlayer.addRecordBackListener((e) => {
       this.setState({
         recordSecs: e.current_position,
@@ -115,7 +138,21 @@ export default class App extends React.Component {
     this.setState({
       recordSecs: 0,
     });
-    console.log(result);
+    const path = Platform.select({
+      ios: 'hello.m4a',
+      android: 'sdcard/hello.mp4',
+    });
+    //let p = btoa(uri);
+    RNFS.readDir(uri)
+	  .then((result) => {
+	  	this.setState({recordedFiles: result});
+
+	    return Promise.all([RNFS.stat(result[0].path), result[0].path]);
+	  })
+	  .catch((err) => {
+	    console.log(err.message, err.code);
+	  });
+    console.log(p);
   }
 
   onStartPlay = async () => {
@@ -124,7 +161,7 @@ export default class App extends React.Component {
       ios: 'hello.m4a',
       android: 'sdcard/hello.mp4',
     });
-    const msg = await this.audioRecorderPlayer.startPlayer();
+    const msg = await this.audioRecorderPlayer.startPlayer(path);
     this.audioRecorderPlayer.setVolume(1.0);
     console.log(msg);
     this.audioRecorderPlayer.addPlayBackListener((e) => {
