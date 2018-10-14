@@ -1,18 +1,20 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, View, Text} from 'react-native';
-import { Container, Header, Content, Button, Icon, Card, CardItem, Body, Left, Right  } from 'native-base';
+import { Container, Header, Content, Button, Icon, Card, CardItem, Body, Left, Right, Title } from 'native-base';
 import { PieChart, AreaChart, BarChart, Grid } from 'react-native-svg-charts';
 import { Text as TextChart } from 'react-native-svg'
+import { recordings } from "./Variables.js";
 import * as shape from 'd3-shape'
 
 export default class Feedback extends Component {
   render() {
     
+    const currentSpeech = recordings[Object.keys(recordings)[Object.keys(recordings).length - 1]];
     const fill = 'rgb(134, 65, 244)'
-    const data   = [ 50, 10, 40, 95, 4, 12, 85, 160, 35, 53 ]
+    const barData   = [ 50, 10, 40, 95, 4, 12, 85, 20, 35, 53 ]
     const areaData = [ 20, 10, 15, -15, -4, -14, 10, 21, 25, 0, -23, 24, 10, -20, -10 ]
     const pieData = [ 50, 10, 40, 95, -4, -24, 85, 91, 35, 53, -53, 24, 50, -20, -80 ]
- 
+
     const randomColor = () => ('#' + (Math.random() * 0xFFFFFF << 0).toString(16) + '000000').slice(0, 7)
 
     const pie = pieData
@@ -46,6 +48,16 @@ export default class Feedback extends Component {
 
     return (
       <Container>
+        <Header>
+          <Left>
+            <Button transparent onPress={() => this.props.navigation.navigate('HomePage')}>
+              <Icon name='ios-home'/>
+            </Button>
+          </Left>
+          <Body>
+            <Title>Statistics</Title>
+          </Body>
+        </Header>
         <Content >
           <Card>
             <CardItem>
@@ -60,36 +72,18 @@ export default class Feedback extends Component {
             <View>
               <BarChart
                 style={{ height: 200, flex: 1 }}
-                data={ data }
+                data={ barData }
                 svg={{ fill }}
                 contentInset={{ top: 60, bottom: 0 }}
                 spacing={0.2}
-                                    gridMin={0}
+                gridMin={0}
               >
                 <Grid direction={Grid.Direction.HORIZONTAL}/>
                 <Labels/>
               </BarChart>
               <Text>
-                Your speech sucks
               </Text>
             </View>
-            <CardItem>
-              <Left>
-                <Button transparent>
-                  <Icon active name="thumbs-up" />
-                  <Text>12 Likes</Text>
-                </Button>
-              </Left>
-              <Body>
-                <Button transparent>
-                  <Icon active name="chatbubbles" />
-                  <Text>4 Comments</Text>
-                </Button>
-              </Body>
-              <Right>
-                <Text>11h ago</Text>
-              </Right>
-            </CardItem>
           </Card>
 
           <Card>
@@ -115,26 +109,8 @@ export default class Feedback extends Component {
                 <Grid/>
               </AreaChart>
               <Text>
-                Your speech sucks
               </Text>
             </View>
-            <CardItem>
-              <Left>
-                <Button transparent>
-                  <Icon active name="thumbs-up" />
-                  <Text>12 Likes</Text>
-                </Button>
-              </Left>
-              <Body>
-                <Button transparent>
-                  <Icon active name="chatbubbles" />
-                  <Text>4 Comments</Text>
-                </Button>
-              </Body>
-              <Right>
-                <Text>11h ago</Text>
-              </Right>
-            </CardItem>
           </Card>
 
           <Card>
@@ -152,26 +128,8 @@ export default class Feedback extends Component {
                 data={ pie }
               />
               <Text>
-                Your speech sucks
               </Text>
             </View>
-            <CardItem>
-              <Left>
-                <Button transparent>
-                  <Icon active name="thumbs-up" />
-                  <Text>12 Likes</Text>
-                </Button>
-              </Left>
-              <Body>
-                <Button transparent>
-                  <Icon active name="chatbubbles" />
-                  <Text>4 Comments</Text>
-                </Button>
-              </Body>
-              <Right>
-                <Text>11h ago</Text>
-              </Right>
-            </CardItem>
           </Card>
 
         </Content>

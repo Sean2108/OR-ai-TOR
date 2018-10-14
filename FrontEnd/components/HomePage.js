@@ -21,7 +21,7 @@ export default class HomePage extends Component {
               <Button transparent onPress={() => this.props.navigation.navigate('History')}>
                 <Icon name='ios-archive' style ={{fontSize: 40, color: 'tomato', }}/>
               </Button>
-              <Button transparent onPress={() => this.props.navigation.navigate('Feedback')}>
+              <Button transparent onPress={() => this.props.navigation.navigate('AllTimeFeedback')}>
                 <Icon name='ios-stats' style ={{fontSize: 40, color: 'tomato', }}/>
               </Button>
               <Button transparent onPress={() => this.props.navigation.navigate('Settings')}>

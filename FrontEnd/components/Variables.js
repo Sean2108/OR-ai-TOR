@@ -4,22 +4,70 @@ var recordings = {
   recording_01: {
   	path: "../assets/recording_01", 
   	Description: "Description", 
-  	Score: "Score"
+  	Score: "Score",
+  	StopWords: {
+  		uhh: 10,
+  		the: 20,
+  		umm: 10,
+  		and: 25,
+  		I: 7,
+  		yes: 12,
+  		no: 15,
+  		maybe: 16,
+  		after: 5,
+  		lets: 12,
+  	},
   },
   recording_02: {
   	path: "../assets/recording_02", 
   	Description: "Description", 
-  	Score: "Score"
+  	Score: "Score",
+  	StopWords: {
+  		uhh: 10,
+  		the: 20,
+  		umm: 10,
+  		and: 25,
+  		I: 7,
+  		yes: 12,
+  		no: 15,
+  		maybe: 16,
+  		after: 5,
+  		lets: 12,
+  	},
   },
   recording_03: {
   	path: "../assets/recording_03", 
   	Description: "Description", 
-  	Score: "Score"
+  	Score: "Score",
+  	StopWords: {
+  		uhh: 10,
+  		the: 20,
+  		umm: 10,
+  		and: 25,
+  		I: 7,
+  		yes: 12,
+  		no: 15,
+  		maybe: 16,
+  		after: 5,
+  		lets: 12,
+  	},
   },
   recording_04: {
   	path: "../assets/recording_04", 
   	Description: "Description", 
-  	Score: "Score"
+  	Score: "Score",
+  	StopWords: {
+  		uhh: 10,
+  		the: 20,
+  		umm: 10,
+  		and: 25,
+  		I: 7,
+  		yes: 12,
+  		no: 15,
+  		maybe: 16,
+  		after: 5,
+  		lets: 12,
+  	}
   }
 };
 
