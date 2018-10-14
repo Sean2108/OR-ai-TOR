@@ -10,14 +10,14 @@ export default class HomePage extends Component {
         <Content >
           <Grid>
             <Row>
-              <Text style={styles.titleText}>Place-Holder</Text>
+              <Text style={styles.titleText}>Present Pro</Text>
             </Row>
-            <Row style={{position: 'relative', alignItems: 'center', alignSelf: 'center', marginTop: 120 }}>
+            <Row style={{alignItems: 'center', alignSelf: 'center', marginTop: 180}}>
               <Button transparent onPress={() => this.props.navigation.navigate('AudioRecorder')}>
-                <Icon name='md-arrow-dropright-circle' style ={{fontSize: 120, color: 'tomato', }}/>
+                <Icon name='md-arrow-dropright-circle' style ={{fontSize: 120, color: 'tomato', height: 120 }}/>
               </Button>
             </Row>
-            <Row  style={{alignItems: 'center', alignSelf: 'center', marginTop: 100 }}>
+            <Row  style={{alignItems: 'center', alignSelf: 'center', marginTop: 200}}>
               <Button transparent onPress={() => this.props.navigation.navigate('History')}>
                 <Icon name='ios-archive' style ={{fontSize: 40, color: 'tomato', }}/>
               </Button>
@@ -41,11 +41,10 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     alignItems: 'center',
-    // backgroundColor: '#cecece',
   },
   titleText: {
-    marginTop: 100 ,
-    color: 'black',
+    marginTop: 50 ,
+    color: 'tomato',
     fontSize: 60 ,
   },
 });

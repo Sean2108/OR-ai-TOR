@@ -15,11 +15,13 @@ import {
 } from 'react-native';
 
 import AudioRecorderPlayer from 'react-native-audio-recorder-player';
-import { Container, Header, Content, Spinner } from 'native-base';
 import RNFS from 'react-native-fs';
+import TimerMixin from 'react-timer-mixin';
 
 var uri;
-export default class AudioRecorder extends React.Component {
+var stop;
+var count = 0;
+export default class App extends React.Component {
 
   constructor(props) {
     super(props);
@@ -30,53 +32,13 @@ export default class AudioRecorder extends React.Component {
       currentDurationSec: 0,
       playTime: '00:00:00',
       duration: '00:00:00',
-      recordedFiles:'',
+      Feedback:'Let Get Started!'
     };
 
     this.audioRecorderPlayer = new AudioRecorderPlayer();
     this.audioRecorderPlayer.setSubscriptionDuration(0.09); // optional. Default is 0.1
   }
 
-  Btoa(input){
-    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
-    let str = input;
-    let output = '';
-
-    for (let block = 0, charCode, i = 0, map = chars;
-    str.charAt(i | 0) || (map = '=', i % 1);
-    output += map.charAt(63 & block >> 8 - i % 1 * 8)) {
-
-      charCode = str.charCodeAt(i += 3/4);
-
-      if (charCode > 0xFF) {
-        throw new Error("'btoa' failed: The string to be encoded contains characters outside of the Latin1 range.");
-      }
-
-      block = block << 8 | charCode;
-    }
-
-    return output;
-  }
-
-  onStatusPress = (e: any) => {
-    const touchX = e.nativeEvent.locationX;
-    console.log(`touchX: ${touchX}`);
-    const playWidth = (this.state.currentPositionSec / this.state.currentDurationSec);
-    console.log(`currentPlayWidth: ${playWidth}`);
-
-    const currentPosition = Math.round(this.state.currentPositionSec);
-    console.log(`currentPosition: ${currentPosition}`);
-
-    if (playWidth && playWidth < touchX) {
-      const addSecs = Math.round((currentPosition + 3000));
-      this.audioRecorderPlayer.seekToPlayer(addSecs);
-      console.log(`addSecs: ${addSecs}`);
-    } else {
-      const subSecs = Math.round((currentPosition - 3000));
-      this.audioRecorderPlayer.seekToPlayer(subSecs);
-      console.log(`subSecs: ${subSecs}`);
-    }
-  }
   onStartRecord = async () => {
     if (Platform.OS === 'android') {
       try {
@@ -119,10 +81,10 @@ export default class AudioRecorder extends React.Component {
       }
     }
     const path = Platform.select({
-      ios: 'hello.m4a',
-      android: 'sdcard/hello.mp4',
+      ios: '0.m4a',
+      android: 'sdcard/0.mp4',
     });
-    uri = await this.audioRecorderPlayer.startRecorder(path); //file location
+    uri = await this.audioRecorderPlayer.startRecorder(path);
     this.audioRecorderPlayer.addRecordBackListener((e) => {
       this.setState({
         recordSecs: e.current_position,
@@ -130,97 +92,69 @@ export default class AudioRecorder extends React.Component {
       });
       return;
     });
+
+      stop = setInterval(() => {
+          this.audioRecorderPlayer.stopRecorder();
+          this.audioRecorderPlayer.removeRecordBackListener();
+            console.log('stop');
+            ++count;
+            const path = Platform.select({
+              ios: count + '.m4a',
+              android: 'sdcard/'+ count + '.mp4',
+            });
+            let old_uri = uri;
+            this.audioRecorderPlayer.startRecorder(path).then((result) => {uri = result});
+            this.audioRecorderPlayer.addRecordBackListener((e) => {
+              this.setState({
+                recordSecs: e.current_position,
+                recordTime: this.audioRecorderPlayer.mmssss(Math.floor(e.current_position)),
+              });
+              return;
+            });
+            RNFS.readFile(old_uri,'base64')
+            .then((result) => {
+                fetch('http://10.27.45.207:8080/live', {
+                  method: 'POST',
+                  body: result,
+                });
+                  console.log(result);
+                })
+                .catch((err) => {
+                  console.log(err);
+                  console.log(err.message, err.code);
+           });
+        }, 5000);
+
+        console.log('start');
+
     console.log(`uri: ${uri}`);
   }
 
+  // restart = () =>
+
   onStopRecord = async () => {
-    const result = await this.audioRecorderPlayer.stopRecorder();
+    clearInterval(stop);
+    console.log('onStopRecord');
+    const res = await this.audioRecorderPlayer.stopRecorder();
     this.audioRecorderPlayer.removeRecordBackListener();
     this.setState({
       recordSecs: 0,
     });
-    const path = Platform.select({
-      ios: 'hello.m4a',
-      android: 'sdcard/hello.mp4',
-    });
-    //let p = btoa(uri);
-    RNFS.readDir(uri)
-    .then((result) => {
-      this.setState({recordedFiles: result});
-
-      return Promise.all([RNFS.stat(result[0].path), result[0].path]);
-    })
-    .catch((err) => {
-      console.log(err.message, err.code);
-    });
-    let p = btoa(this.state.recordedFiles)
-    console.log(p);
-  }
-
-  onStartPlay = async () => {
-    console.log('onStartPlay');
-    const path = Platform.select({
-      ios: 'hello.m4a',
-      android: 'sdcard/hello.mp4',
-    });
-    const msg = await this.audioRecorderPlayer.startPlayer(path);
-    this.audioRecorderPlayer.setVolume(1.0);
-    console.log(msg);
-    this.audioRecorderPlayer.addPlayBackListener((e) => {
-      if (e.current_position === e.duration) {
-        console.log('finished');
-        this.audioRecorderPlayer.stopPlayer();
-      }
-      this.setState({
-        currentPositionSec: e.current_position,
-        currentDurationSec: e.duration,
-        playTime: this.audioRecorderPlayer.mmssss(Math.floor(e.current_position)),
-        duration: this.audioRecorderPlayer.mmssss(Math.floor(e.duration)),
-      });
-      return;
-    });
-  }
-
-  onPausePlay = async () => {
-    await this.audioRecorderPlayer.pausePlayer();
-  }
-
-  onStopPlay = async () => {
-    console.log('onStopPlay');
-    this.audioRecorderPlayer.stopPlayer();
-    this.audioRecorderPlayer.removePlayBackListener();
+   console.log('bye');
   }
 
   render(){
-    const playWidth = (this.state.currentPositionSec / this.state.currentDurationSec);
     return (
     <View style={styles.container}>
-      <Spinner large color='red' style ={{fontSize: 120, marginTop: 100 }}/>
-      <View style={styles.viewPlayer}>
-        <TouchableOpacity
-          style={styles.viewBarWrapper}
-          onPress={this.onStatusPress}
-        >
-          <View style={styles.viewBar}>
-            <View style={[
-              styles.viewBarPlay,
-              { width: playWidth },
-            ]}/>
-          </View>
-        </TouchableOpacity>
-        <Text style={styles.txtCounter}>{this.state.playTime} / {this.state.duration}</Text>
-        <View style={styles.playBtnWrapper}>
-          <TouchableOpacity onPress={this.onStartPlay}>
-          <View style={styles.button}>
-            <Text style={styles.buttonText}>Play</Text>
+      <Text style={styles.titleTxt}>{this.state.Feedback}</Text>
+      <View style={styles.viewRecorder}>
+        <View style={styles.recordBtnWrapper}>
+          <TouchableOpacity onPress={this.onStartRecord}>
+          <View style={styles.btn}>
+            <Text style={styles.txt}>Record</Text>
           </View>
           </TouchableOpacity>
-          <TouchableOpacity onPress={this.onPausePlay}>
-          <View style={styles.button}>
-            <Text style={styles.buttonText}>Pause</Text>
-          </View>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={this.onStopPlay}>
+          <TouchableOpacity onPress={this.onStopRecord}>
           <View style={styles.button}>
             <Text style={styles.buttonText}>Stop</Text>
           </View>
@@ -241,7 +175,7 @@ const styles = StyleSheet.create({
 titleTxt: {
   marginTop: 100 ,
   color: 'black',
-  fontSize: 28 ,
+  fontSize: 32 ,
 },
 viewRecorder: {
   marginTop: 40 ,
@@ -251,61 +185,21 @@ viewRecorder: {
 recordBtnWrapper: {
   flexDirection: 'row',
 },
-viewPlayer: {
-  marginTop: 60 ,
-  alignSelf: 'stretch',
-  alignItems: 'center',
-},
-viewBarWrapper: {
-  marginTop: 28 ,
-  marginHorizontal: 28 ,
-  alignSelf: 'stretch',
-},
-viewBar: {
-  backgroundColor: '#ccc',
-  height: 4 ,
-  alignSelf: 'stretch',
-},
-viewBarPlay: {
-  backgroundColor: 'black',
-  height: 4 ,
-  width: 0,
-},
-playStatusTxt: {
-  marginTop: 8 ,
-  color: '#ccc',
-},
-playBtnWrapper: {
-  flexDirection: 'row',
-  marginTop: 40 ,
-},
 btn: {
-  borderColor: 'black',
-  borderWidth: 1 ,
+  borderWidth:1,
+  borderColor:'rgba(0,0,0,0.2)',
+  alignItems:'center',
+  justifyContent:'center',
+  width:100,
+  height:100,
+  backgroundColor:'tomato',
+  borderRadius:100,
 },
 txt: {
-  color: 'black',
+  color: 'white',
   fontSize: 14 ,
   marginHorizontal: 8 ,
   marginVertical: 4 ,
-},
-txtRecordCounter: {
-  marginTop: 32 ,
-  color: 'black',
-  fontSize: 20 ,
-  textAlignVertical: 'center',
-  fontWeight: '200',
-
-  letterSpacing: 3,
-},
-txtCounter: {
-  marginTop: 12 ,
-  color: 'black',
-  fontSize: 20 ,
-  textAlignVertical: 'center',
-  fontWeight: '200',
-
-  letterSpacing: 3,
 },
 button:{
   height: 50,
