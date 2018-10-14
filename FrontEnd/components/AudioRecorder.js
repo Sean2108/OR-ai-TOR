@@ -33,7 +33,7 @@ export default class App extends React.Component {
       currentDurationSec: 0,
       playTime: '00:00:00',
       duration: '00:00:00',
-      Feedback:'Let Get Started!',
+      Feedback:'Let Get Started',
       sec: 0,
       min: 0,
     };
@@ -120,6 +120,7 @@ export default class App extends React.Component {
               ios: count + '.m4a',
               android: 'sdcard/'+ count + '.mp4',
             });
+
             let old_uri = uri;
             this.audioRecorderPlayer.startRecorder(path).then((result) => {uri = result});
             this.audioRecorderPlayer.addRecordBackListener((e) => {

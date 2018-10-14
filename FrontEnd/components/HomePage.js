@@ -10,7 +10,7 @@ export default class HomePage extends Component {
         <Content >
           <Grid>
             <Row>
-              <Text style={styles.titleText}>Present Pro</Text>
+              <Text style={styles.titleText}>OR{'{'}ai{'}'}TOR</Text>
             </Row>
             <Row style={{alignItems: 'center', alignSelf: 'center', marginTop: 180}}>
               <Button transparent onPress={() => this.props.navigation.navigate('AudioRecorder')}>
@@ -46,5 +46,6 @@ const styles = StyleSheet.create({
     marginTop: 50 ,
     color: 'tomato',
     fontSize: 60 ,
+    fontFamily: 'Cochin',
   },
 });
