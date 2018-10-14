@@ -147,7 +147,7 @@ def build_model():
     model.save('audio.h5')
     return model
 
-def load_model():
+def load_existing_model():
     return load_model('audio.h5')
 
 #predict_proba(model, y, batch_size = NULL, verbose = 0, steps = NULL)
