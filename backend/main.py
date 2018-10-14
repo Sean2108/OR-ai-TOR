@@ -9,8 +9,9 @@ app = Flask(__name__)
 
 @app.route('/live', methods=['POST'])
 def process_batch():
-    # print(len(request.json['audio']))
-    audio = base64.b64decode(request.json['audio'])
+    audio = base64.b64decode(request.data.decode("utf-8"))
+    if os.path.exists("audio.wav"):
+        os.remove("audio.wav")
     with open('audio.m4a', 'wb') as fp:
         fp.write(audio)
     ff = ffmpy.FFmpeg(inputs={'audio.m4a': None}, outputs={'audio.wav': None})

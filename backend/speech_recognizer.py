@@ -13,9 +13,9 @@ def convert_to_text(audio_file):
         text = r.recognize_google(audio)
         return text, count_words(text), len(text.split(' ')) * 60 / duration
     except sr.UnknownValueError:
-        return "Sphinx could not understand audio", None
+        return "Sphinx could not understand audio", None, None
     except sr.RequestError as e:
-        return "Sphinx error; {0}".format(e), None
+        return "Sphinx error; {0}".format(e), None, None
 
 def count_words(text):
     count_of_words = {}
