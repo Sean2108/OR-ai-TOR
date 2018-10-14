@@ -4,14 +4,14 @@ from nltk.corpus import stopwords
 from os import path
 r = sr.Recognizer()
 
-def convert_to_text(audio):
-    # AUDIO_FILE = path.join(path.dirname(path.realpath(__file__)), "OSR_us_000_0010_8k.wav")
-    # with sr.AudioFile(AUDIO_FILE) as source:
-    #     audio = r.record(source)  # read the entire audio file
-    # recognize speech using Sphinx
+def convert_to_text(audio_file):
+    AUDIO_FILE = path.join(path.dirname(path.realpath(__file__)), audio_file)
+    with sr.AudioFile(AUDIO_FILE) as source:
+        audio = r.record(source)
+        duration = source.DURATION
     try:
         text = r.recognize_google(audio)
-        return text, count_words(text)
+        return text, count_words(text), len(text.split(' ')) * 60 / duration
     except sr.UnknownValueError:
         return "Sphinx could not understand audio", None
     except sr.RequestError as e:
