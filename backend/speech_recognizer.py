@@ -5,8 +5,8 @@ from os import path
 r = sr.Recognizer()
 
 def convert_to_text(audio_file):
-    AUDIO_FILE = path.join(path.dirname(path.realpath(__file__)), audio_file)
-    with sr.AudioFile(AUDIO_FILE) as source:
+    # AUDIO_FILE = path.join(path.dirname(path.realpath(__file__)), audio_file)
+    with sr.AudioFile(audio_file) as source:
         audio = r.record(source)
         duration = source.DURATION
     try:
