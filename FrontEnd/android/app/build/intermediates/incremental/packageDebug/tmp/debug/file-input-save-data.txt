@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sun Oct 14 05:35:03 SGT 2018
+#Sun Oct 14 10:50:45 SGT 2018
 5.base=/home/daniel/Desktop/NTU/iNTUition/FrontEnd/android/app/build/intermediates/transforms/mergeJniLibs/debug/0
 42.base=/home/daniel/Desktop/NTU/iNTUition/FrontEnd/android/app/build/intermediates/transforms/mergeJniLibs/debug/0
 22.path=lib/armeabi-v7a/libglog_init.so

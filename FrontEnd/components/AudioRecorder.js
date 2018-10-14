@@ -160,6 +160,8 @@ export default class App extends React.Component {
       recordSecs: 0,
     });
    console.log('bye');
+   // Add speech to Variables and Feedback will access the most recent one
+   this.props.navigation.navigate('Feedback');
   }
 
   render(){
@@ -206,7 +208,7 @@ viewRecorder: {
   alignItems: 'center',
 },
 recordBtnWrapper: {
-  marginTop: 200,
+  marginTop: 125,
   flexDirection: 'row',
 },
 btn: {
