@@ -5,9 +5,9 @@ import base64
 import ffmpy
 import os
 
-app = Flask(__name__)
+application = Flask(__name__)
 
-@app.route('/live', methods=['POST'])
+@application.route('/live', methods=['POST'])
 def process_batch():
     audio = base64.b64decode(request.data.decode("utf-8"))
     if os.path.exists("audio.wav"):
@@ -20,6 +20,9 @@ def process_batch():
     return jsonify({"text": text, "count_of_words": count_of_words, "pace": pace})
     # return jsonify({"text": "test"})
 
-@app.route('/end', methods=['GET'])
+@application.route('/end', methods=['GET'])
 def end():
     return jsonify({"done": True})
+
+if __name__ == '__main__':
+    application.run(host='0.0.0.0')
