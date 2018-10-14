@@ -21,6 +21,7 @@ import TimerMixin from 'react-timer-mixin';
 var uri;
 var stop;
 var count = 0;
+var timer;
 export default class App extends React.Component {
 
   constructor(props) {
@@ -32,7 +33,9 @@ export default class App extends React.Component {
       currentDurationSec: 0,
       playTime: '00:00:00',
       duration: '00:00:00',
-      Feedback:'Let Get Started!'
+      Feedback:'Let Get Started!',
+      sec: 0,
+      min: 0,
     };
 
     this.audioRecorderPlayer = new AudioRecorderPlayer();
@@ -80,6 +83,21 @@ export default class App extends React.Component {
         return;
       }
     }
+
+    timer = setInterval(() => {
+      let s = this.state.sec;
+      let m = this.state.min;
+      if(s == 59){
+        this.setState({
+          min : ++m,
+          sec : 0
+        })
+      }else{
+        this.setState({
+          sec: ++s,
+        })
+      }
+    },1000);
     const path = Platform.select({
       ios: '0.m4a',
       android: 'sdcard/0.mp4',
@@ -134,6 +152,7 @@ export default class App extends React.Component {
 
   onStopRecord = async () => {
     clearInterval(stop);
+    clearInterval(timer);
     console.log('onStopRecord');
     const res = await this.audioRecorderPlayer.stopRecorder();
     this.audioRecorderPlayer.removeRecordBackListener();
@@ -147,7 +166,7 @@ export default class App extends React.Component {
     return (
     <View style={styles.container}>
       <Text style={styles.titleTxt}>{this.state.Feedback}</Text>
-      <View style={styles.viewRecorder}>
+      <Text style={styles.timer}>{this.state.min} Minute {this.state.sec} Seconds</Text>
         <View style={styles.recordBtnWrapper}>
           <TouchableOpacity onPress={this.onStartRecord}>
           <View style={styles.btn}>
@@ -155,11 +174,10 @@ export default class App extends React.Component {
           </View>
           </TouchableOpacity>
           <TouchableOpacity onPress={this.onStopRecord}>
-          <View style={styles.button}>
-            <Text style={styles.buttonText}>Stop</Text>
+          <View style={styles.btn}>
+            <Text style={styles.txt}>Stop</Text>
           </View>
           </TouchableOpacity>
-        </View>
       </View>
     </View>
   );
@@ -177,12 +195,18 @@ titleTxt: {
   color: 'black',
   fontSize: 32 ,
 },
+timer:{
+  marginTop: 200,
+  fontSize: 20,
+  color: 'black',
+},
 viewRecorder: {
   marginTop: 40 ,
   width: '100%',
   alignItems: 'center',
 },
 recordBtnWrapper: {
+  marginTop: 200,
   flexDirection: 'row',
 },
 btn: {
@@ -194,17 +218,18 @@ btn: {
   height:100,
   backgroundColor:'tomato',
   borderRadius:100,
+  marginRight: 20,
+  marginLeft: 25
 },
 txt: {
   color: 'white',
-  fontSize: 14 ,
+  fontSize: 20,
   marginHorizontal: 8 ,
   marginVertical: 4 ,
 },
 button:{
   height: 50,
   marginTop: 20,
-  marginLeft: 10,
   width: 100,
   backgroundColor: 'tomato',
   justifyContent: 'center',

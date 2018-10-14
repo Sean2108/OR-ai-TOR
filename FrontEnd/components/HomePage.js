@@ -25,7 +25,7 @@ export default class HomePage extends Component {
                 <Icon name='ios-stats' style ={{fontSize: 40, color: 'tomato', }}/>
               </Button>
               <Button transparent onPress={() => this.props.navigation.navigate('Settings')}>
-                <Icon name='cog' style ={{fontSize: 40, color: 'tomato', }}/>
+                <Icon name='cog' style ={{fontSize: 40, color: 'tomato', height:40 }}/>
               </Button>
             </Row>
           </Grid>
